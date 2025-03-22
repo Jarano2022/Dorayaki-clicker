@@ -1,5 +1,6 @@
 let clickCount = 0;
 let pointsPerClick = 1;
+let pointsPerSecond = 0;
 let upgradeCounts = {
     upgrade1: 0,
     upgrade2: 0,
@@ -10,6 +11,13 @@ let upgradeCounts = {
     upgrade7: 0,
     upgrade8: 0
 };
+const timer = setInterval(() => {
+    clickCount += pointsPerSecond;
+    document.getElementById('clickCount').innerText = clickCount;},
+    1000)
+const timer2 = setInterval(() => {
+        document.getElementById('clickCount').innerText = clickCount;},
+        1)
 
 document.getElementById('breadstick').addEventListener('click', () => {
     clickCount += pointsPerClick;
