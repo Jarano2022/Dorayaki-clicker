@@ -117,3 +117,13 @@ document.getElementById('upgrade8').addEventListener('click', () => {
         document.getElementById('upgrade8Count').innerText = upgradeCounts.upgrade8;
     }
 });
+
+function desplegableTienda() {
+    const desplegableTienda = document.getElementById('desplegable1')
+    if (desplegableTienda.style.display === "none") {
+        desplegableTienda.style.display = "block";
+    }
+    else {
+        desplegableTienda.style.display = "none";
+    }
+}
