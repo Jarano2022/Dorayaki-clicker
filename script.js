@@ -119,11 +119,11 @@ document.getElementById('upgrade8').addEventListener('click', () => {
 });
 
 function desplegableTienda() {
-    const desplegableTienda = document.getElementById('desplegable1')
-    if (desplegableTienda.style.display === "none") {
-        desplegableTienda.style.display = "block";
+    const desplegableTiendaVar = document.getElementById('desplegable1')
+    if (desplegableTiendaVar.style.display === "none") {
+        desplegableTiendaVar.style.display = "block";
     }
     else {
-        desplegableTienda.style.display = "none";
+        desplegableTiendaVar.style.display = "none";
     }
 }
