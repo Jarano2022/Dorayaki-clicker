@@ -17,10 +17,7 @@ body {
 #breadstick {
     width: 500px; /* Aumenta el tamaño de la imagen */
     cursor: pointer;
-    margin-right: 20px;
     transition: transform 0.1s;
-    position: absolute; /* Posiciona la imagen */
-    left: 650px; /* Aparta la imagen a la izquierda */
     top: 200px; /* Baja la imagen */
 }
 
