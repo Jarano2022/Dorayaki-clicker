@@ -18,7 +18,7 @@ body {
     width: 500px; /* Aumenta el tamaño de la imagen */
     cursor: pointer;
     transition: transform 0.1s;
-    top: 500px; /* Baja la imagen */
+    margin-top: 50px; /* Baja la imagen */
 }
 
 #breadstick:active {
