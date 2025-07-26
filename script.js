@@ -36,7 +36,7 @@ document.getElementById('breadstick').addEventListener('click', () => {
 
 document.getElementById('upgrade1').addEventListener('click', () => {
     if (clickCount >= upgradeClicks.upgrade1) {
-        clickCount -= 15;
+        clickCount -= upgradeClicks.upgrade1;
         pointsPerClick += 1;
         upgradeCounts.upgrade1 += 1;
         document.getElementById('clickCount').innerText = clickCount;
@@ -48,8 +48,8 @@ document.getElementById('upgrade1').addEventListener('click', () => {
 });
 
 document.getElementById('upgrade2').addEventListener('click', () => {
-    if (clickCount >= 100) {
-        clickCount -= 100;
+    if (clickCount >= upgradeClicks.upgrade2) {
+        clickCount -= upgradeClicks.upgrade2;
         pointsPerClick += 5;
         upgradeCounts.upgrade2 += 1;
         document.getElementById('clickCount').innerText = clickCount;
@@ -61,8 +61,8 @@ document.getElementById('upgrade2').addEventListener('click', () => {
 });
 
 document.getElementById('upgrade3').addEventListener('click', () => {
-    if (clickCount >= 250) {
-        clickCount -= 250;
+    if (clickCount >= upgradeClicks.upgrade3) {
+        clickCount -= upgradeClicks.upgrade3;
         pointsPerClick += 10;
         upgradeCounts.upgrade3 += 1;
         document.getElementById('clickCount').innerText = clickCount;
@@ -74,8 +74,8 @@ document.getElementById('upgrade3').addEventListener('click', () => {
 });
 
 document.getElementById('upgrade4').addEventListener('click', () => {
-    if (clickCount >= 500) {
-        clickCount -= 500;
+    if (clickCount >= upgradeClicks.upgrade4) {
+        clickCount -= upgradeClicks.upgrade4;
         pointsPerClick += 15;
         upgradeCounts.upgrade4 += 1;
         document.getElementById('clickCount').innerText = clickCount;
@@ -87,8 +87,8 @@ document.getElementById('upgrade4').addEventListener('click', () => {
 });
 
 document.getElementById('upgrade5').addEventListener('click', () => {
-    if (clickCount >= 1000) {
-        clickCount -= 1000;
+    if (clickCount >= upgradeClicks.upgrade5) {
+        clickCount -= upgradeClicks.upgrade5;
         pointsPerClick += 25;
         upgradeCounts.upgrade5Count += 1;
         document.getElementById('clickCount').innerText = clickCount;
@@ -100,8 +100,8 @@ document.getElementById('upgrade5').addEventListener('click', () => {
 });
 
 document.getElementById('upgrade6').addEventListener('click', () => {
-    if (clickCount >= 2500) {
-        clickCount -= 2500;
+    if (clickCount >= upgradeClicks.upgrade6) {
+        clickCount -= upgradeClicks.upgrade6;
         pointsPerClick += 40;
         upgradeCounts.upgrade6 += 1;
         document.getElementById('clickCount').innerText = clickCount;
@@ -113,8 +113,8 @@ document.getElementById('upgrade6').addEventListener('click', () => {
 });
 
 document.getElementById('upgrade7').addEventListener('click', () => {
-    if (clickCount >= 5000) {
-        clickCount -= 5000;
+    if (clickCount >= upgradeClicks.upgrade7) {
+        clickCount -= upgradeClicks.upgrade7;
         pointsPerClick += 55;
         upgradeCounts.upgrade7 += 1;
         document.getElementById('clickCount').innerText = clickCount;
@@ -126,8 +126,8 @@ document.getElementById('upgrade7').addEventListener('click', () => {
 });
 
 document.getElementById('upgrade8').addEventListener('click', () => {
-    if (clickCount >= 10000) {
-        clickCount -= 10000;
+    if (clickCount >= upgradeClicks.upgrade8) {
+        clickCount -= upgradeClicks.upgrade8;
         pointsPerClick += 125;
         upgradeCounts.upgrade8 += 1;
         document.getElementById('clickCount').innerText = clickCount;
@@ -136,10 +136,12 @@ document.getElementById('upgrade8').addEventListener('click', () => {
     }
 });
 
-function desplegableTienda() {
-    const desplegableTiendaVar = document.getElementById('desplegable1')
+function desplegableTienda(IDDesplegable) {
+    const desplegableTiendaVar = document.getElementById(IDDesplegable);
     if (desplegableTiendaVar.style.display === "none") {
-        desplegableTiendaVar.style.display = "block";
+        desplegableTiendaVar.style.display = "flex";
+        desplegableTiendaVar.style.justifyContent = "center";
+        desplegableTiendaVar.style.marginTop = "10px";
     }
     else {
         desplegableTiendaVar.style.display = "none";
