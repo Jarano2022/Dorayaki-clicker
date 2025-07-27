@@ -11,6 +11,18 @@ let upgradeCounts = {
     upgrade7: 0,
     upgrade8: 0
 };
+
+let AupgradeCounts = {
+    upgrade1: 0,
+    upgrade2: 0,
+    upgrade3: 0,
+    upgrade4: 0,
+    upgrade5: 0,
+    upgrade6: 0,
+    upgrade7: 0,
+    upgrade8: 0
+};
+
 let upgradeClicks = {
     upgrade1: 15,
     upgrade2: 100,
@@ -21,9 +33,23 @@ let upgradeClicks = {
     upgrade7: 5000,
     upgrade8: 10000
 };
+
+let AupgradeClicks = {
+    upgrade1: 100,
+    upgrade2: 250,
+    upgrade3: 500,
+    upgrade4: 1000,
+    upgrade5: 2500,
+    upgrade6: 5000,
+    upgrade7: 10000,
+    upgrade8: 25000
+};
+
+
+
 const timer = setInterval(() => {
     clickCount += pointsPerSecond;
-    document.getElementById('clickCount').innerText = clickCount;},
+    },
     1000)
 const timer2 = setInterval(() => {
         document.getElementById('clickCount').innerText = clickCount;},
@@ -136,12 +162,103 @@ document.getElementById('upgrade8').addEventListener('click', () => {
     }
 });
 
+
+document.getElementById('Aupgrade1').addEventListener('click', () => {
+    if (clickCount >= AupgradeClicks.upgrade1) {
+        clickCount -= AupgradeClicks.upgrade1;
+        pointsPerSecond += 1;
+        AupgradeCounts.upgrade1 += 1;
+        document.getElementById('Aupgrade1Count').innerText = AupgradeCounts.upgrade1; // Muestra el contador de la mejora 1
+        document.getElementById('Aupgrade2').style.display = 'inline-block'; // Desbloquea la mejora 2
+        document.getElementById('Aupgrade2Count').style.display = 'inline-block'; // Muestra el contador de la mejora 2
+        AupgradeClicks.upgrade1 += 100; // Incrementa el costo de la siguiente mejora
+    }
+});
+document.getElementById('Aupgrade2').addEventListener('click', () => {
+    if (clickCount >= AupgradeClicks.upgrade2) {
+        clickCount -= AupgradeClicks.upgrade2;
+        pointsPerSecond += 1;
+        AupgradeCounts.upgrade2 += 1;
+        document.getElementById('Aupgrade2Count').innerText = AupgradeCounts.upgrade2;
+        document.getElementById('Aupgrade3').style.display = 'inline-block'; // Desbloquea la mejora 2
+        document.getElementById('Aupgrade3Count').style.display = 'inline-block'; // Muestra el contador de la mejora 2
+        AupgradeClicks.upgrade2 += 250; // Incrementa el costo de la siguiente mejora
+    }
+});
+document.getElementById('Aupgrade3').addEventListener('click', () => {
+    if (clickCount >= AupgradeClicks.upgrade3) {
+        clickCount -= AupgradeClicks.upgrade3;
+        pointsPerSecond += 1;
+        AupgradeCounts.upgrade3 += 1;
+        document.getElementById('Aupgrade3Count').innerText = AupgradeCounts.upgrade3;
+        document.getElementById('Aupgrade4').style.display = 'inline-block'; // Desbloquea la mejora 4
+        document.getElementById('Aupgrade4Count').style.display = 'inline-block'; // Muestra el contador de la mejora 4
+        AupgradeClicks.upgrade3 += 500; // Incrementa el costo de la siguiente mejora
+    }
+});
+document.getElementById('Aupgrade4').addEventListener('click', () => {
+    if (clickCount >= AupgradeClicks.upgrade4) {
+        clickCount -= AupgradeClicks.upgrade4;
+        pointsPerSecond += 1;
+        AupgradeCounts.upgrade4 += 1;
+        document.getElementById('Aupgrade4Count').innerText = AupgradeCounts.upgrade4;
+        document.getElementById('Aupgrade5').style.display = 'inline-block'; // Desbloquea la mejora 5
+        document.getElementById('Aupgrade5Count').style.display = 'inline-block'; // Muestra el contador de la mejora 5
+        AupgradeClicks.upgrade4 += 1000; // Incrementa el costo de la siguiente mejora
+    }
+});
+document.getElementById('Aupgrade5').addEventListener('click', () => {
+    if (clickCount >= AupgradeClicks.upgrade5) {
+        clickCount -= AupgradeClicks.upgrade5;
+        pointsPerSecond += 1;
+        AupgradeCounts.upgrade5 += 1;
+        document.getElementById('Aupgrade5Count').innerText = AupgradeCounts.upgrade5;
+        document.getElementById('Aupgrade6').style.display = 'inline-block'; // Desbloquea la mejora 6
+        document.getElementById('Aupgrade6Count').style.display = 'inline-block'; // Muestra el contador de la mejora 6
+        AupgradeClicks.upgrade5 += 2500; // Incrementa el costo de la siguiente mejora
+    }
+});
+document.getElementById('Aupgrade6').addEventListener('click', () => {
+    if (clickCount >= AupgradeClicks.upgrade6) {
+        clickCount -= AupgradeClicks.upgrade6;
+        pointsPerSecond += 1;
+        AupgradeCounts.upgrade6 += 1;
+        document.getElementById('Aupgrade6Count').innerText = AupgradeCounts.upgrade6;
+        document.getElementById('Aupgrade7').style.display = 'inline-block'; // Desbloquea la mejora 7
+        document.getElementById('Aupgrade7Count').style.display = 'inline-block'; // Muestra el contador de la mejora 7
+        AupgradeClicks.upgrade6 += 5000; // Incrementa el costo de la siguiente mejora
+    }
+});
+document.getElementById('Aupgrade7').addEventListener('click', () => {
+    if (clickCount >= AupgradeClicks.upgrade7) {
+        clickCount -= AupgradeClicks.upgrade7;
+        pointsPerSecond += 1;
+        AupgradeCounts.upgrade7 += 1;
+        document.getElementById('Aupgrade7Count').innerText = AupgradeCounts.upgrade7;
+        document.getElementById('Aupgrade8').style.display = 'inline-block'; // Desbloquea la mejora 8
+        document.getElementById('Aupgrade8Count').style.display = 'inline-block'; // Muestra el contador de la mejora 8
+        AupgradeClicks.upgrade7 += 10000; // Incrementa el costo de la siguiente mejora
+    }
+});
+document.getElementById('Aupgrade8').addEventListener('click', () => {
+    if (clickCount >= AupgradeClicks.upgrade8) {
+        clickCount -= AupgradeClicks.upgrade8;
+        pointsPerSecond += 1;
+        AupgradeCounts.upgrade8 += 1;
+        document.getElementById('Aupgrade8Count').innerText = AupgradeCounts.upgrade8;
+        AupgradeClicks.upgrade8 += 25000; // Incrementa el costo de la siguiente mejora
+    }
+});
+
+
+
+
+
 function desplegableTienda(IDDesplegable) {
     const desplegableTiendaVar = document.getElementById(IDDesplegable);
     if (desplegableTiendaVar.style.display === "none") {
         desplegableTiendaVar.style.display = "flex";
-        desplegableTiendaVar.style.justifyContent = "center";
-        desplegableTiendaVar.style.marginTop = "10px";
+        desplegableTiendaVar.style.position = "fixed";
     }
     else {
         desplegableTiendaVar.style.display = "none";
