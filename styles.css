@@ -70,6 +70,11 @@ body {
     color: white;
 }
 
+#desplegable1Contenido div {
+    margin: 10px 0; /* Espacio entre los botones */
+
+}
+
 #upgrades span {
     font-size: 16px;
     margin-left: 10px;
@@ -93,7 +98,7 @@ body {
     position: fixed;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 1000; /* Para que quede encima */
+    z-index: 2000; /* Para que quede encima */
     background: white;
     padding: 20px;
     border-radius: 10px;

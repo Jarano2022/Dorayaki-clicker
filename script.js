@@ -162,10 +162,110 @@ document.getElementById('upgrade8').addEventListener('click', () => {
     }
 });
 
+
+document.getElementById('Aupgrade1').addEventListener('click', () => {
+    if (clickCount >= AupgradeClicks.upgrade1) {
+        clickCount -= AupgradeClicks.upgrade1;
+        pointsPerSecond += 10;
+        AupgradeCounts.upgrade1 += 1;
+        document.getElementById('Aupgrade1Count').innerText = AupgradeCounts.upgrade1;
+        document.getElementById('Aupgrade2').style.display = 'inline-block'; // Desbloquea la mejora 2
+        document.getElementById('Aupgrade2Count').style.display = 'inline-block'; // Muestra el contador de la mejora 2
+        AupgradeClicks.upgrade1 += 100; // Incrementa el costo de la siguiente mejora
+        document.getElementById('Aupgrade1Cost').innerText = AupgradeClicks.upgrade1;
+    }
+});
+document.getElementById('Aupgrade2').addEventListener('click', () => {
+    if (clickCount >= AupgradeClicks.upgrade2) {
+        clickCount -= AupgradeClicks.upgrade2;
+        pointsPerSecond += 20;
+        AupgradeCounts.upgrade2 += 1;
+        document.getElementById('Aupgrade2Count').innerText = AupgradeCounts.upgrade2;
+        document.getElementById('Aupgrade3').style.display = 'inline-block'; // Desbloquea la mejora 3
+        document.getElementById('Aupgrade3Count').style.display = 'inline-block';
+        AupgradeClicks.upgrade2 += 250; // Incrementa el costo de la siguiente mejora
+        document.getElementById('Aupgrade2Cost').innerText = AupgradeClicks.upgrade2;
+    }
+});
+document.getElementById('Aupgrade3').addEventListener('click', () => {
+    if (clickCount >= AupgradeClicks.upgrade3) {
+        clickCount -= AupgradeClicks.upgrade3;
+        pointsPerSecond += 30;
+        AupgradeCounts.upgrade3 += 1;
+        document.getElementById('Aupgrade3Count').innerText = AupgradeCounts.upgrade3;
+        document.getElementById('Aupgrade4').style.display = 'inline-block'; // Desbloquea la mejora 4
+        document.getElementById('Aupgrade4Count').style.display = 'inline-block';
+        AupgradeClicks.upgrade3 += 500; // Incrementa el costo de la siguiente mejora
+        document.getElementById('Aupgrade3Cost').innerText = AupgradeClicks.upgrade3;
+    }
+});
+document.getElementById('Aupgrade4').addEventListener('click', () => {
+    if (clickCount >= AupgradeClicks.upgrade4) {
+        clickCount -= AupgradeClicks.upgrade4;
+        pointsPerSecond += 40;
+        AupgradeCounts.upgrade4 += 1;
+        document.getElementById('Aupgrade4Count').innerText = AupgradeCounts.upgrade4;
+        document.getElementById('Aupgrade5').style.display = 'inline-block'; // Desbloquea la mejora 5
+        document.getElementById('Aupgrade5Count').style.display = 'inline-block';
+        AupgradeClicks.upgrade4 += 1000; // Incrementa el costo de la siguiente mejora
+        document.getElementById('Aupgrade4Cost').innerText = AupgradeClicks.upgrade4;
+    }
+});
+document.getElementById('Aupgrade5').addEventListener('click', () => {
+    if (clickCount >= AupgradeClicks.upgrade5) {
+        clickCount -= AupgradeClicks.upgrade5;
+        pointsPerSecond += 10;
+        AupgradeCounts.upgrade5 += 1;
+        document.getElementById('Aupgrade5Count').innerText = AupgradeCounts.upgrade5;
+        document.getElementById('Aupgrade6').style.display = 'inline-block'; // Desbloquea la mejora 6
+        document.getElementById('Aupgrade6Count').style.display = 'inline-block';
+        AupgradeClicks.upgrade5 += 2500; // Incrementa el costo de la siguiente mejora
+        document.getElementById('Aupgrade5Cost').innerText = AupgradeClicks.upgrade5;
+    }
+});
+document.getElementById('Aupgrade6').addEventListener('click', () => {
+    if (clickCount >= AupgradeClicks.upgrade6) {
+        clickCount -= AupgradeClicks.upgrade6;
+        pointsPerSecond += 10;
+        AupgradeCounts.upgrade6 += 1;
+        document.getElementById('Aupgrade6Count').innerText = AupgradeCounts.upgrade6;
+        document.getElementById('Aupgrade7').style.display = 'inline-block'; // Desbloquea la mejora 7
+        document.getElementById('Aupgrade7Count').style.display = 'inline-block';
+        AupgradeClicks.upgrade6 += 5000; // Incrementa el costo de la siguiente mejora
+        document.getElementById('Aupgrade6Cost').innerText = AupgradeClicks.upgrade6;
+    }
+});
+document.getElementById('Aupgrade7').addEventListener('click', () => {
+    if (clickCount >= AupgradeClicks.upgrade7) {
+        clickCount -= AupgradeClicks.upgrade7;
+        pointsPerSecond += 10;
+        AupgradeCounts.upgrade7 += 1;
+        document.getElementById('Aupgrade7Count').innerText = AupgradeCounts.upgrade7;
+        document.getElementById('Aupgrade8').style.display = 'inline-block'; // Desbloquea la mejora 8
+        document.getElementById('Aupgrade8Count').style.display = 'inline-block';
+        AupgradeClicks.upgrade7 += 10000; // Incrementa el costo de la siguiente mejora
+        document.getElementById('Aupgrade7Cost').innerText = AupgradeClicks.upgrade7;
+    }
+});
+document.getElementById('Aupgrade8').addEventListener('click', () => {
+    if (clickCount >= AupgradeClicks.upgrade8) {
+        clickCount -= AupgradeClicks.upgrade8;
+        pointsPerSecond += 10;
+        AupgradeCounts.upgrade8 += 1;
+        document.getElementById('Aupgrade8Count').innerText = AupgradeCounts.upgrade8;
+        AupgradeClicks.upgrade8 += 25000; // Incrementa el costo de la siguiente mejora
+        document.getElementById('Aupgrade8Cost').innerText = AupgradeClicks.upgrade8;
+    }
+});
+
+
+
+
+
 function desplegableTienda() {
     const desplegableTiendaVar = document.getElementById('desplegable1')
     if (desplegableTiendaVar.style.display === "none") {
-        desplegableTiendaVar.style.display = "block";
+        desplegableTiendaVar.style.display = "block";   /********************************************************************132/*/////**/*** */ */ */;
     }
     else {
         desplegableTiendaVar.style.display = "none";
